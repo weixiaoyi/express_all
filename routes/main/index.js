@@ -1,9 +1,10 @@
-const express = require('express');
-const router = express.Router();
+const { ExpressRouter } = require('../../components')
+const self = new ExpressRouter();
+
 
 /* GET users listing. */
-router.get('/', function(req, res, next) {
-  res.send('respondddddddddd');
+self.router.get('/', (req, res) => {
+  res.send('fffddd');
 });
 
-module.exports = router;
+module.exports = self;
