@@ -1,9 +1,11 @@
-const express = require('express');
-const router = express.Router();
+const mainRouter = require('./main/index');
+const userRouter = require('./user/index');
+const routerCenter = (app) => {
+  app.use('/main',mainRouter)
+  app.use('/user',userRouter)
+  app.use('/',(req,res)=>{
+    res.send('已经进入应用')
+  });
+}
 
-/* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Exp' });
-});
-
-module.exports = router;
+module.exports = routerCenter;
