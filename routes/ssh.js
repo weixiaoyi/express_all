@@ -16,6 +16,16 @@ router.get('/:name', (req, res) => {
           localDir: 'D:/myproject/rxjs_mobx/build',
           remoteDir: '/myprojects/rxjs_mobx/build',
         }
+        break
+      case 'website':
+        config = {
+          host: '47.244.59.36',
+          port: 22,
+          username: 'root',
+          password: 'Weixiaoyao886',
+          localDir: 'D:/myproject/ui-perfect/build',
+          remoteDir: '/myprojects/rxjs_mobx/build',
+        }
     }
   }
   if (config) {

@@ -65,7 +65,7 @@ class Ssh {
         if (!err) {
           sftp.fastPut(`${localDir}/${this.destName}`, `${remoteDir}/${this.destName}`, (err) => {
             if (!err) {
-              this.conn.exec(`cd ${remoteDir} && unzip ${this.destName}`, (err) => {
+              this.conn.exec(`cd ${remoteDir} && unzip -o ${this.destName}`, (err) => {
                 if (!err) {
                   callback('压缩文件成功&&上传换文件替换文件夹成功&&解压成功')
                 }
